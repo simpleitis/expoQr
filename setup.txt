@@ -1,0 +1,25 @@
+Run 'expo login' to login to expo
+
+Create 'eas.json' and paste
+{
+  "build": {
+    "preview": {
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "preview2": {
+      "android": {
+        "gradleCommand": ":app:assembleRelease"
+      }
+    },
+    "preview3": {
+      "developmentClient": true
+    },
+    "production": {}
+  }
+}
+
+Run 'npm install -g eas-cli'
+
+Run 'eas build -p android --profile preview'
